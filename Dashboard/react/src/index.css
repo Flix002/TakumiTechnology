@@ -1,2 +1,30 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+/* 
+.navbarBg {
+    background: #9c9c9c;
+    background: linear-gradient(157deg, #9c9c9c 0%, #bc82c4 50%, #a6fffe 72%, #ffffff 96%, rgba(237, 221, 83, 1) 100%);
+    animation: navbarBgGradient 15s infinite;
+    
+} */
+.btnGradientBackground {
+        /* background: linear-gradient(to right, #c38dd9ae , #1b879fb2 ,#9ab9c6b3); */
+     background: linear-gradient(to right, #2c2c2cd2 , #000000db ,#2f4d48b3);
+}
 
+.userSettingGradient {
+    background: #1082b3;
+    background: linear-gradient(130deg, rgba(16, 130, 179, 1) 0%, rgba(59, 127, 135, 1) 52%, rgba(23, 39, 102, 1) 100%);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Theme */
+.bg-Darktheme {
+    background-color: rgb(13, 13, 13);
+}
