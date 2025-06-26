@@ -3,54 +3,57 @@ import styled from 'styled-components';
 function GradientBtn(props : any) {
   return (
     <StyledWrapper>
-      <button className="neu-button">{props.BtnName}</button>
+      <button>
+        <span className="text">{props.BtnName}</span>
+      </button>
     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-  .neu-button {
-    // background-color: #e0e0e0;
-    border-radius: 20px;
-    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-    color: #4d4d4d;
+  button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #454545, #211a4f 50%, #a302b5);
+    border: 0;
+    border-radius: 25px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
     cursor: pointer;
-    font-size: 18px;
-    padding: 12px 30px;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid rgb(206, 206, 206);
-    position:relative;
-    overflow:hidden;
-    z-index:1;
-    transition:all 0.5s ease;
+    transition: all 0.3s;
+    overflow: hidden;
   }
 
-  .neu-button::before {
-    content : '';
-    position : absolute;
-    left:0;
-    top:0;
-    width:0px;
-    height:100%;
-    z-index:-1;
-    background: #a168a1;
-    transition:all 0.5s ease;
-    border-radius:20px;
-    background: linear-gradient(121deg, rgba(161, 104, 161, 0.7) 0%, rgba(120, 153, 158, 0.78) 52%, rgba(41, 63, 148, 0.62) 100%);
+  button:active,
+  button:hover {
+    outline: 0;
   }
 
-  .neu-button:hover::before {
-    width:100%;
+  button span {
+    background-color: rgb(5, 6, 45);
+    padding: 20px 24px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
   }
 
-  .neu-button:hover {
-    color:white;
+  button:hover span {
+    background: none;
   }
 
-
-  .neu-button:focus {
-    outline: none;
-    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+  button:active {
+    transform: scale(0.9);
   }`;
 
 export default GradientBtn;

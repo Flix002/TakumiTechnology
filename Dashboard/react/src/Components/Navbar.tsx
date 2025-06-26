@@ -1,8 +1,9 @@
 import {  useState } from "react"
-import clockIcon from '../assets/icons/stopwatch-solid.svg'
-import textFileIcon from '../assets/icons/file-lines-solid.svg'
-import textFileWordIcon from '../assets/icons/file-word-solid.svg'
-
+import { RiTimerFill } from "react-icons/ri";
+import { BsFileEarmarkTextFill } from "react-icons/bs";
+import { MdCardTravel } from "react-icons/md";
+import { FaFileCircleCheck } from "react-icons/fa6";
+import { AiFillCarryOut } from "react-icons/ai";
 
 export function Navbar() {
     const [ attendanceActive, setAttendanceActive ] = useState(false);
@@ -25,7 +26,7 @@ export function Navbar() {
     };
 
     return (
-        <div className="h-full w-[90px] transition-all duration-500 dark:bg-[#1c1c1c] overflow-hidden" style={{ boxShadow : '0.5px 1px 5px gray' }} id="navbar">
+        <div className="h-full w-[90px] transition-all duration-500 dark:bg-[#1f2b38] overflow-hidden shadow-[0.5px_1px_5px_gray] dark:shadow-[0.5px_1px_30px_black]" id="navbar">
             <div className="w-full flex h-[100px] cursor-pointer px-[20px] py-[10px] items-center justify-center">
                 <div className="" onClick={navbarSlideOn}>
                     <h1 className="text-[35px] text-[#dda900] not-italic text-shadow-[1px_1px_1px_gray]">匠</h1>
@@ -33,14 +34,16 @@ export function Navbar() {
             </div>
             <div className="nav " id="nav">  
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
-                    attendanceActive ? 'bg-gray-400' : 'bg-none'
+                    attendanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv" >
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-800 ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900 ${
                         attendanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setAttendanceActive( !attendanceActive )
                         }>
-                        <img src={clockIcon} alt="" className="w-[20px] h-[20px]"/>
+                        <div className="">
+                            <RiTimerFill className="text-black inline text-[25px] dark:text-[#dcdcdc] transition-all duraction-500" onClick={navbarSlideOn}/>
+                        </div>
                         <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400 dark:text-[#d8d8d8]" >Attendance, Travel Espenses</h1>
                     </div>
                     <div className={`transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
@@ -60,14 +63,16 @@ export function Navbar() {
                     </div>
                 </div>
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
-                    sDanceActive ? 'bg-gray-400' : 'bg-none'
+                    sDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-800 ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900 ${
                         sDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setSDanceActive( !sDanceActive )
                         }>
-                        <img src={textFileIcon} alt="" className="w-[20px] h-[20px]"/>
+                        <div>
+                            <BsFileEarmarkTextFill className="text-black inline text-[25px] transition-all duraction-500 dark:text-[#dcdcdc]"  onClick={navbarSlideOn}/>
+                        </div>
                         <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400 dark:text-[#d8d8d8]">Espenses</h1>
                     </div>
                     <div className={`transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
@@ -87,14 +92,16 @@ export function Navbar() {
                     </div>
                 </div>
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
-                    tDanceActive ? 'bg-gray-400' : 'bg-none'
+                    tDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-800  ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
                         tDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setTDanceActive( !tDanceActive )
                         }>
-                        <img src={textFileWordIcon} alt="" className="w-[20px] h-[20px]"/>
+                        <div>
+                            <MdCardTravel className="text-black inline text-[25px] transition-all duraction-500 dark:text-[#dcdcdc]" onClick={navbarSlideOn}/>
+                        </div>
                         <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400 dark:text-[#d8d8d8]">Travel Espenses</h1>
                     </div>
                     <div className={`transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
@@ -114,14 +121,16 @@ export function Navbar() {
                     </div>
                 </div>
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
-                    fDanceActive ? 'bg-gray-400' : 'bg-none'
+                    fDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-800  ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
                         fDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setFDanceActive( !fDanceActive )
                         }>
-                        <img src={textFileIcon} alt="" className="w-[20px] h-[20px]"/>
+                        <div>
+                            <FaFileCircleCheck className="text-black inline text-[25px] transition-all duraction-500 dark:text-[#dcdcdc]" onClick={navbarSlideOn}/>
+                        </div>
                         <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400 dark:text-[#d8d8d8]">Attendance, Travel Espenses</h1>
                     </div>
                     <div className={`transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
@@ -141,14 +150,16 @@ export function Navbar() {
                     </div>
                 </div>
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
-                    fiDanceActive ? 'bg-gray-400' : 'bg-none'
+                    fiDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-800  ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
                         fiDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setFIDanceActive( !fiDanceActive )
                         }>
-                        <img src={textFileWordIcon} alt="" className="w-[20px] h-[20px]"/>
+                        <div>
+                            <AiFillCarryOut className="text-black inline text-[25px] transition-all duraction-500 dark:text-[#dcdcdc]" onClick={navbarSlideOn}/>
+                        </div>
                         <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400 dark:text-[#d8d8d8]">Travel Espenses</h1>
                     </div>
                     <div className={`transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
