@@ -1,5 +1,4 @@
 import { Navbar } from "./Navbar"
-import { Link } from "react-router";
 import GradientBtn from "./GradientBtn";
 import Gojo from "../assets/nImg/photo_2024-12-09_14-42-12.jpg"
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -40,8 +39,8 @@ export function Page() {
             <Navbar/>
             <div className="w-full h-full px-[50px]">
                 <div className="w-full flex justify-between items-center h-[80px] mb-[20px]">
-                     <div className="logo h-[80px] flex items-center justify-center space-x-[10px]">
-                        <Link to='/' className="logo text-[25px] text-[#dda900] text-shadow-black italic" style={{textShadow : "1px 1px 1px gray"}}><span className="text-[35px] text-[#dda900] not-italic">匠</span> Takumi Technology</Link>
+                    <div>
+                        <h1 className="text-gray-500 text-[30px] font-semibold font font-sans">| Attendance Form</h1>
                     </div>
                     <div className="flex space-x-[10px] items-center">
                         <div className="font-sans text-[20px] dark:text-[#d8d8d8] italic">
@@ -118,7 +117,7 @@ export function Page() {
                     </div>
                 </div>
             </div>
-            <div className="w-[430px] shadow-[-0.3px_-0.2px_30px_#d7d7d7dd] dark:shadow-[-0.3px_-0.2px_30px_black] h-full bg-[#9898982c] dark:bg-[#050505be] backdrop-blur-[5px] fixed right-0 top-0 z-40 transform translate-x-[1000px] transition-all duration-600" id="userSettingBox">
+            <div className="w-[430px] shadow-[-0.3px_-0.2px_30px_#d7d7d7dd] dark:shadow-[-0.3px_-0.2px_30px_black] h-full bg-[#9898982c] dark:bg-[#050505be] backdrop-blur-[10px] dark:backdrop-blur-[5px] fixed right-0 top-0 z-40 transform translate-x-[1000px] transition-all duration-600" id="userSettingBox">
                <div className="w-full relative ">
                     <HiMiniXMark className="text-[35px] text-white hover:text-red-600 cursor-pointer absolute right-[25px] top-[15px] z-42 transition-all duration-300 " onClick={userSettingOnOff}/>
                     <div className="w-full h-[200px] relative">

@@ -22,14 +22,21 @@ export function Navbar() {
             ( el as Element ).classList.toggle('delay-[0.5s]');
             ( el as Element ).classList.toggle('opacity-100');
             ( el as Element ).classList.toggle('opacity-0');
-        })
+        });
+
+        const takumi = document.getElementById('takumi') as HTMLElement;
+
+        takumi.classList.toggle('delay-[0.5s]');
+        takumi.classList.toggle('opacity-100');
+        takumi.classList.toggle('opacity-0');
     };
 
     return (
         <div className="h-full w-[90px] transition-all duration-500 dark:bg-[#1f2b38] overflow-hidden shadow-[0.5px_1px_5px_gray] dark:shadow-[0.5px_1px_30px_black]" id="navbar">
             <div className="w-full flex h-[100px] cursor-pointer px-[20px] py-[10px] items-center justify-center">
-                <div className="" onClick={navbarSlideOn}>
-                    <h1 className="text-[35px] text-[#dda900] not-italic text-shadow-[1px_1px_1px_gray]">匠</h1>
+                <div className="flex w-full pl-[5px] h-full items-center space-x-[10px]" onClick={navbarSlideOn}>
+                    <h1 className="text-[35px] text-[#dda900] inline not-italic text-shadow-[1px_1px_1px_gray]">匠 </h1>
+                    <h1 className="text-[23px] inline text-[#dda900] text-shadow-[1px_1px_1px_gray] italic font-sans opacity-0 transition-all duration-400" id="takumi">Takumi Technology</h1> 
                 </div>
             </div>
             <div className="nav " id="nav">  
