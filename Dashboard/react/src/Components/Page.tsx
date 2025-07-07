@@ -172,7 +172,7 @@ export function Page() {
                         </div>
                     </div>
                     <div className="w-full h-[60px] flex justify-center items-center  font-sans font-semibold ">
-                        <button className="bg-gray-500 py-[10px] px-[20px] rounded-[10px] text-white cursor-pointer">Log Out</button>
+                        <button className="bg-black dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-900 transition-all duration-400 py-[10px] px-[20px] rounded-[10px] text-white cursor-pointer">Log Out</button>
                     </div>
                </div>
             </div>

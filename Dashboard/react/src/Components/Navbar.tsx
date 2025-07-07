@@ -148,7 +148,7 @@ export function Navbar() {
                     <div className={`flex transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
                         fDanceActive ? 'flex' : 'hidden'
                     }`}>
-                        <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400">Edit</h1>
+                        <h1 className="text-[16px] font-semibold font-sans navBtnBoxContent opacity-0 transition-all duration-400 dark:text-[#d8d8d8]">Edit</h1>
                     </div>
                     <div className={`flex transition-all space-x-[10px] items-center h-[80px] w-full justify-start pl-[40px] cursor-pointer ${
                         fDanceActive ? 'flex' : 'hidden'
