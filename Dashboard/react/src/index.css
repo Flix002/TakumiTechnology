@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
 /* 
 .navbarBg {
     background: #9c9c9c;
