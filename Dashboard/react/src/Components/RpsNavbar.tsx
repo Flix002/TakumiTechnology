@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa6";
-import Gojo from "../assets/nImg/photo_2024-12-09_14-42-12.jpg"
+import Gojo from "../assets/nImg/photo_2024-12-09_14-42-12.jpg";
 import { RiTimerFill } from "react-icons/ri";
 import { BsFileEarmarkTextFill } from "react-icons/bs";
 import { MdCardTravel } from "react-icons/md";

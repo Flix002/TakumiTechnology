@@ -1,4 +1,4 @@
-import {  useState } from "react"
+import { useState } from "react";
 import { RiTimerFill } from "react-icons/ri";
 import { BsFileEarmarkTextFill } from "react-icons/bs";
 import { MdCardTravel } from "react-icons/md";

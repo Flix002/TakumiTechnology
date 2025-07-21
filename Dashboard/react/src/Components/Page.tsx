@@ -1,5 +1,5 @@
-import { Navbar } from "./Navbar"
-import Gojo from "../assets/nImg/photo_2024-12-09_14-42-12.jpg"
+import { Navbar } from "./Navbar";
+import Gojo from "../assets/nImg/photo_2024-12-09_14-42-12.jpg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdLock } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
@@ -34,7 +34,7 @@ export function Page() {
     }, [isDark]);
 
     return (
-        <div className="w-screen h-[120vh] bg-[#e9e9e9dd] dark:bg-[#121212] relative xl:flex overflow-hidden">
+        <div className="w-screen h-auto bg-[#e9e9e9dd] dark:bg-[#121212] relative xl:flex overflow-hidden">
             <Navbar/>
             <RpsNavbar/>
             <div className="w-full h-full xl:px-[50px] px-[15px]">
