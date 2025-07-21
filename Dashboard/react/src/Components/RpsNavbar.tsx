@@ -59,7 +59,6 @@ export function RpsNavbar() {
         rpsVpelBox.classList.toggle('hidden');
     }
 
-
     return (
         <div className="w-full h-[80px] block xl:hidden relative">
             <nav className="w-full h-full flex justify-between items-center pl-[30px] pr-[20px] bg-[#e9e9e9dd]">

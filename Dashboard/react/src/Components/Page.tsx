@@ -28,10 +28,8 @@ export function Page() {
 
         if (isDark) {
             root.classList.add('dark');
-            console.log('dark Class Add')
         } else {
             root.classList.remove('dark');
-            console.log('dark Class Remove');
         }
     }, [isDark]);
 
