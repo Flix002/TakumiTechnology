@@ -1,5 +1,8 @@
 import './App.css'
-import { Page } from './Components/Page'
+// import Loader from './Components/LoadingComponent'
+import LoginForm from './Components/LoginForm'
+// import { Page } from './Components/Page'
+
 import {
     BrowserRouter,
     Routes,
@@ -12,7 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Page/>}/>
+          <Route path='/' element={<LoginForm/>}/>
         </Routes>
       </BrowserRouter>
     </>
