@@ -1,4 +1,4 @@
-import {  useState } from "react"
+import { useState } from "react";
 import { RiTimerFill } from "react-icons/ri";
 import { BsFileEarmarkTextFill } from "react-icons/bs";
 import { MdCardTravel } from "react-icons/md";
@@ -32,9 +32,9 @@ export function Navbar() {
     };
 
     return (
-        <div className="h-full w-[90px] transition-all duration-500 dark:bg-[#1f2b38] overflow-hidden shadow-[0.5px_1px_5px_gray] dark:shadow-[0.5px_1px_30px_black]" id="navbar">
+        <div className="h-full w-[80px] transition-all duration-500 dark:bg-[#1f2b38] overflow-hidden shadow-[0.5px_1px_5px_gray] dark:shadow-[0.5px_1px_30px_black] hidden xl:block" id="navbar">
             <div className="w-full flex h-[100px] cursor-pointer px-[20px] py-[10px] items-center justify-center">
-                <div className="flex w-full pl-[5px] h-full items-center space-x-[10px]" onClick={navbarSlideOn}>
+                <div className="flex w-full h-full items-center space-x-[10px]" onClick={navbarSlideOn}>
                     <h1 className="text-[35px] text-[#dda900] inline not-italic text-shadow-[1px_1px_1px_gray]">匠 </h1>
                     <h1 className="text-[23px] inline text-[#dda900] text-shadow-[1px_1px_1px_gray] italic font-sans opacity-0 transition-all duration-400" id="takumi">Takumi Technology</h1> 
                 </div>
@@ -42,8 +42,8 @@ export function Navbar() {
             <div className="nav " id="nav">  
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
                     attendanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
-                }`} id="attendanceDiv" >
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900 ${
+                }`} id="attendanceDiv" > 
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full start pl-[25px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900 ${
                         attendanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setAttendanceActive( !attendanceActive )
@@ -72,7 +72,7 @@ export function Navbar() {
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
                     sDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900 ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[25px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900 ${
                         sDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setSDanceActive( !sDanceActive )
@@ -101,7 +101,7 @@ export function Navbar() {
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
                     tDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[25px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
                         tDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setTDanceActive( !tDanceActive )
@@ -130,7 +130,7 @@ export function Navbar() {
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
                     fDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[25px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
                         fDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setFDanceActive( !fDanceActive )
@@ -159,7 +159,7 @@ export function Navbar() {
                 <div className={`flex flex-col items-center w-full h-auto transition-all duration-200 cursor-pointer ${
                     fiDanceActive ? 'bg-gray-400 dark:bg-gray-900' : 'bg-none'
                 }`} id="attendanceDiv">
-                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[30px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
+                    <div className={`flex space-x-[10px] items-center h-[80px] w-full justify-start pl-[25px] cursor-pointer transition-all duration-200 hover:bg-gray-400 dark:hover:bg-gray-900  ${
                         fiDanceActive ? 'border-l-[6px] border-l-yellow-500' : 'border-0'
                     }`} onClick={
                             () => setFIDanceActive( !fiDanceActive )
