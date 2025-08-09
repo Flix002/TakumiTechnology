@@ -14,8 +14,10 @@ export function Navbar() {
 
     function navbarSlideOn() : void {
         const navbar = document.getElementById('navbar') as HTMLElement;
-        navbar.classList.toggle('w-[400px]');
+        navbar.classList.toggle('w-[300px]');
         navbar.classList.toggle('w-[90px]');
+        
+        // navbar.classList.toggle('w-[90px]');
 
         let navbtnBoxContent = document.querySelectorAll('.navBtnBoxContent');
         navbtnBoxContent.forEach((el) => {
@@ -31,8 +33,9 @@ export function Navbar() {
         takumi.classList.toggle('opacity-0');
     };
 
+
     return (
-        <div className="h-full w-[80px] transition-all duration-500 dark:bg-[#1f2b38] overflow-hidden shadow-[0.5px_1px_5px_gray] dark:shadow-[0.5px_1px_30px_black] hidden xl:block" id="navbar">
+        <div className="h-full w-[80px] transition-all duration-500 dark:bg-[#1f2b38] overflow-hidden shadow-[0.5px_1px_5px_gray] dark:shadow-[0.5px_1px_30px_black] hidden xl:block bg-[#ededed5e] backdrop-blur-[5px]" id="navbar">
             <div className="w-full flex h-[100px] cursor-pointer px-[20px] py-[10px] items-center justify-center">
                 <div className="flex w-full h-full items-center space-x-[10px]" onClick={navbarSlideOn}>
                     <h1 className="text-[35px] text-[#dda900] inline not-italic text-shadow-[1px_1px_1px_gray]">匠 </h1>

@@ -3,7 +3,7 @@ import { HourSelectDropDown } from "./HourSelect.DropDown"
 import { ReasonSelect } from "./ReasonSelect"
 import { MdOutlineUploadFile } from "react-icons/md";
 
-export function DailyForm(props : any) {
+export function NRpsDailyForm(props : any) {
     return (
         <div className="w-full h-full ">
             <div className="w-full flex h-[60px] justify-between items-center px-[20px]">
@@ -54,7 +54,7 @@ export function DailyForm(props : any) {
                 </div>
                 <div className="w-[120px] h-[45px] flex justify-center items-center">
                     <div className="bg-white h-full w-full rounded-[5px]">
-
+                        
                     </div>
                 </div>
             </div>

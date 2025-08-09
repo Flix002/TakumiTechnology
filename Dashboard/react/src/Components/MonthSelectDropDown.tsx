@@ -64,7 +64,7 @@ export function MonthSelectDropDown() {
             <div className='flex space-x-[10px] items-center'>
                 <Label className="inline text-[20px] font-medium text-gray-500">Month</Label>
                 <div className="relative mt-2">
-                    <ListboxButton className="grid w-[130px] cursor-pointer grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <ListboxButton className="grid w-[160px] cursor-pointer grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         <span className="col-start-1 row-start-1 flex items-center gap-3 pr-6">
                             <span className="block truncate">{selected.name}</span>
                         </span>
@@ -76,7 +76,7 @@ export function MonthSelectDropDown() {
 
                     <ListboxOptions
                         transition
-                        className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-hidden data-leave:transition data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm"
+                        className="absolute z-10 w-full mt-1 max-h-56 overflow-auto rounded-md bg-[#ffffff7d] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-hidden data-leave:transition data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm backdrop-blur-[10px]"
                     >
                         {months.map((month) => (
                             <ListboxOption

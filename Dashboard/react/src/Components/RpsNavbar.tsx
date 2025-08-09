@@ -60,8 +60,8 @@ export function RpsNavbar() {
     }
 
     return (
-        <div className="w-full h-[80px] block xl:hidden relative">
-            <nav className="w-full h-full flex justify-between items-center pl-[30px] pr-[20px] bg-[#e9e9e9dd]">
+        <div className="w-screen h-[80px] block xl:hidden relative">
+            <nav className="w-full h-full flex justify-between items-center pl-[30px] pr-[20px] bg-[#fafafa]">
                 <div className="flex items-center space-x-[10px]">
                     <h1 className="text-[#dda900] text-[30px]">匠</h1>
                     <h1 className="text-[#dda900] text-[25px] text-shadow-[1px_1px_1px_gray] italic">Takumi Technology</h1>
@@ -71,8 +71,8 @@ export function RpsNavbar() {
                 </div>
             </nav>
             {/* RpsNavBarSlide */}
-            <div className="absolute right-0 top-0 w-[85%] sm:w-[50%] h-[400px] bg-blue-500 transform translate-x-[1000px] transition-all duration-500" id="rpsNavBarBox">
-                <div className="flex items-center w-full h-[80px] bg-[#e9e9e9dd] justify-between pl-[15px] pr-[20px]">
+            <div className="fixed right-0 top-0 w-[85%] sm:w-[50%] h-auto transform translate-x-[1000px] transition-all duration-500" id="rpsNavBarBox">
+                <div className="flex items-center w-full h-[80px] bg-[#e9e9e9] justify-between pl-[15px] pr-[20px]">
                     <div className="flex items-center space-x-[10px] px-[20px] relative" onClick={rpsUserDiv}>
                         <h1 className="text-black text-[22px] cursor-pointer">Zeka002</h1>
                         <div className="w-[45px] h-[45px] rounded-[50%] overflow-hidden cursor-pointer ">

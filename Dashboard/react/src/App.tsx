@@ -1,7 +1,7 @@
 import './App.css'
 // import Loader from './Components/LoadingComponent'
-import LoginForm from './Components/LoginForm'
-// import { Page } from './Components/Page'
+// import LoginForm from './Components/LoginForm'
+import { Page } from './Components/Page'
 
 import {
     BrowserRouter,
@@ -15,11 +15,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<LoginForm/>}/>
+          <Route path='/' element={<Page/>}/>
         </Routes>
       </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default App  
