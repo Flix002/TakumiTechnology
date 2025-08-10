@@ -42,7 +42,7 @@ export function MinuteSelectDropDown() {
         <Listbox value={selected} onChange={setSelected}>
             <div className='flex w-full space-x-[10px] items-center'>
                 <div className="relative">
-                    <ListboxButton className="grid w-[80px] cursor-pointer grid-cols-1 rounded-md bg-white py-3 pr-2 pl-3 text-left text-gray-900 outline-gray-300 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6">
+                    <ListboxButton className="grid w-[80px] border h-[40px] sm:h-[45px] border-gray-200 sm:border-none cursor-pointer grid-cols-1 rounded-md bg-white py-3 pr-2 pl-3 text-left text-gray-900 outline-gray-200 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6">
                         <span className="col-start-1 row-start-1 flex items-center gap-3 pr-6">
                             <span className="block truncate">{selected.name}</span>
                         </span>
@@ -53,7 +53,7 @@ export function MinuteSelectDropDown() {
                     </ListboxButton>
                     <ListboxOptions
                         transition
-                        className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-2 text-base shadow-lg ring-1 ring-black/5 focus:outline-hidden data-leave:transition data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm transition-all duration-300"
+                        className="absolute z-10 mt-1 max-h-56 w-[100px] sm:w-full overflow-auto rounded-md bg-white py-2 text-base shadow-lg ring-1 ring-black/5 focus:outline-hidden data-leave:transition data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm transition-all duration-300"
                     >
                         {minute.map((min) => (
                             <ListboxOption
@@ -69,7 +69,6 @@ export function MinuteSelectDropDown() {
                     </ListboxOptions>
                 </div>
             </div>
-
         </Listbox>
     )
 }

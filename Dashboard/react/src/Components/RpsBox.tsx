@@ -4,7 +4,7 @@ import { RpsAttendanceForm } from "./RpsAttendanceForm";
 
 export function RpsBox() {
     return (
-        <div className="w-full h-auto xl:hidden">
+        <div className="w-full h-auto xl:hidden relative">
             <div className="flex items-center w-full h-[60px] bg-[#ececec94]">
                 <h1 className="pl-[30px] text-black text-[20px]">| Attendance Form</h1>
             </div>
