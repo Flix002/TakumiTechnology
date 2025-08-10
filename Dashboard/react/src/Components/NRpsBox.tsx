@@ -8,18 +8,27 @@ export function NRpsBox() {
                 <h1 className="font-semibold font-sans text-[20px] text-gray-500 dark:text-[#d8d8d8]">Box Heading</h1>
             </div>
             <div className="w-full flex justify-between space-x-[20px] shadow-[-0.3px_-0.2px_30px_#d7d7d7dd] dark:shadow-[-0.3px_-0.2px_30px_black] h-[60px] items-center rounded-[10px] mb-[30px]">
+                {/* Working Hour */}
                 <div className="w-auto h-auto inline items-center px-[20px]">
                     <span className="text-gray-600 font-sans font-semibold dark:text-[#d8d8d8] text-shadow-[0.5px_0.5px_20px_gray] text-[13px]">Working Hour : 20:05</span>
                 </div>
+
+                {/* National Holiday */}
                 <div className="w-auto h-auto inline items-center px-[20px]">
                     <span className="text-gray-600 font-sans font-semibold dark:text-[#d8d8d8] text-shadow-[0.5px_0.5px_20px_gray] text-[13px]">O.T (national Holiday)</span>
                 </div>
+                
+                {/* 36 OT */}
                 <div className="w-auto h-auto inline items-center px-[20px]">
                     <span className="text-gray-600 font-sans font-semibold dark:text-[#d8d8d8] text-shadow-[0.5px_0.5px_20px_gray] text-[13px]">36.O.T</span>
                 </div>
+
+                {/* Remaining Paid leave */}
                 <div className="w-auto h-auto inline items-center px-[20px]">
                     <span className="text-gray-600 font-sans font-semibold dark:text-[#d8d8d8] text-shadow-[0.5px_0.5px_20px_gray] text-[13px]">Remaining Paid Leave</span>
                 </div>
+
+                {/* Leave with Nov 30? */}
                 <div className="w-auto h-auto inline items-center px-[20px]">
                     <span className="text-gray-600 font-sans font-semibold dark:text-[#d8d8d8] text-shadow-[0.5px_0.5px_20px_gray] text-[13px]">Leave With Nov 30?</span>
                 </div>
@@ -30,18 +39,51 @@ export function NRpsBox() {
                         <MonthSelectDropDown />
                     </div>
                     <div className="flex space-x-[20px]">
+                        {/* Set Clock Time */}
                         <button className="w-[120px] bg-black text-white text-[13px] h-[40px] rounded-[20px] cursor-pointer font-sans tracking-[0.5px] hover:bg-linear-160 from-black to-purple-600 transition-all duration-300">
                             SetClockTime
                         </button>
+
+                        {/* Temporary save*/}
                         <button className="w-[120px] bg-black text-white text-[13px] h-[40px] rounded-[20px] cursor-pointer font-sans tracking-[0.5px] hover:bg-linear-160 from-black to-purple-600 transition-all duration-300">
-                            Temporary
+                            Temporary Save
                         </button>
+
+                        {/* Submit all */}
                         <button className="w-[120px] bg-black text-white text-[13px] h-[40px] rounded-[20px] cursor-pointer font-sans tracking-[0.5px] hover:bg-linear-160 from-black to-purple-600 transition-all duration-300">
                             Submit All
                         </button>
-                        <button className="w-[120px] bg-black text-white text-[13px] h-[40px] rounded-[20px] cursor-pointer font-sans tracking-[0.5px] hover:bg-linear-160 from-black to-purple-600 transition-all duration-300">
+
+                        {/* PDF file Upload */}
+                        {/* <label htmlFor="pdf-upload" className="w-[120px] bg-black text-white text-[13px] h-[40px] rounded-[20px] cursor-pointer font-sans tracking-[0.5px] flex items-center justify-center hover:bg-linear-160 from-black to-purple-600 transition-all duration-300">
                             PDF
-                        </button>
+                            <input
+                                id="pdf-upload"
+                                type="file"
+                                accept="application/pdf"
+                                style={{ display: "none" }}
+                                onChange={async (e) => {
+                                    const file = e.target.files?.[0];
+                                    if (!file) return;
+                                    const formData = new FormData();
+                                    formData.append("file", file);
+
+                                    try {
+                                        const res = await fetch("http://localhost:4000/upload-pdf", {
+                                            method: "POST",
+                                            body: formData,
+                                        });
+                                        if (res.ok) {
+                                            alert("PDF uploaded successfully!");
+                                        } else {
+                                            alert("Upload failed.");
+                                        }
+                                    } catch (err) {
+                                        alert("Error uploading PDF.");
+                                    }
+                                }}
+                            />
+                        </label> */}
                     </div>
                 </div>
                 <div className="w-full h-full mt-[30px]">
